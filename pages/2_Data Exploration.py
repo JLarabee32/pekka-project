@@ -26,6 +26,7 @@ corr_matrix_1 = numeric_games.corr()
 cormap = plt.figure(figsize=(10, 8))
 sns.heatmap(corr_matrix_1, annot=True, cmap='coolwarm')
 st.pyplot(cormap)
+st.markdown("The main things we're looking for here is a positive correlation between Shots Against (SA) and Goals Saved Above Expected Above Average (GSAxAA), SA and Goals Saved Above Expected (GSAx), and Expected Goals Against Per Shot (xGA_per_Shot). Although this heatmap shows a weak correlation between our variables, it is positive and shows there may be a relationship we care about")
 
 st.subheader("GSAx vs xGA per Shot")
 fig1, ax1 = plt.subplots()
@@ -75,6 +76,10 @@ alt_chart = alt.Chart(games_z, height=550, width=2200).transform_window(
 ).interactive()
 
 st.altair_chart(alt_chart, use_container_width=True)
-
 st.write("In this chart SA, xGA_per_shot, GSAxAA, GSAx, and GA are z scaled")
+
+st.subheader("What does this mean?")
+st.markdown("What we can see from the typical above average performance shown above is that the typical above average performance, and especially the outlier exceptional performances, come when the team gives up more shots. But there is significant overlap between above and below average performances. What this can imply is that there are different profiles of goalies who perform better with more shots and profiles of goalies who don't necessarily need this. In the next page you can explore individual NHL starting goalies.")
+
+
 
