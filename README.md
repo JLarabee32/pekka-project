@@ -2,6 +2,8 @@
 
 This is a project for the CMSE 830 class at Michigan State University. It is a project based on the question of if a goaltender plays better when they face more shots, and named for the player that inspired this question: Pekka Rinne. 
 
+Located on Streamlit Community Cloud at https://pekka-project.streamlit.app/
+
 
 ### How to run it on your own machine
 
